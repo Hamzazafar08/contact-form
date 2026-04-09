@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Send us a message - We'll get back to you within 24 hours"
+    />
+    <title>Contact Us | Get in Touch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact-container">
+      <!-- Left Side - Contact Info -->
+      <div class="contact-info">
+        <div class="info-content">
+          <div class="info-header">
+            <span class="badge">📬 Get in Touch</span>
+            <h1>Let's Talk</h1>
+            <p>
+              Have a question, project idea, or just want to say hello? We'd
+              love to hear from you.
+            </p>
+          </div>
+
+          <div class="info-details">
+            <div class="detail-item">
+              <div class="detail-icon">📍</div>
+              <div>
+                <h4>Visit Us</h4>
+                <p>123 Innovation Street<br />Tech Valley, CA 94025</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">📧</div>
+              <div>
+                <h4>Email Us</h4>
+                <p>hello@contactform.com<br />support@contactform.com</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">📞</div>
+              <div>
+                <h4>Call Us</h4>
+                <p>+1 (555) 123-4567<br />Mon-Fri, 9am-6pm</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="LinkedIn">🔗</a>
+            <a href="#" aria-label="GitHub">🐙</a>
+            <a href="#" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Contact Form -->
+      <div class="contact-form-wrapper">
+        <div class="form-header">
+          <h2>Send us a Message</h2>
+          <p>We'll respond within 24 hours</p>
+        </div>
+
+        <!-- 
+        ✅ WORKING FORM SETUP:
+        To receive actual emails, replace the action URL with your Formspree endpoint:
+        1. Go to https://formspree.io
+        2. Sign up for free
+        3. Create a new form
+        4. Copy your endpoint (looks like: https://formspree.io/f/xyz123)
+        5. Replace the URL below
+      -->
+        <!-- Updated Form Section - Works immediately without external service -->
+        <form id="contactForm" class="contact-form" action="#" method="POST">
+          <!-- Honeypot field for anti-spam (hidden from real users) -->
+          <input type="text" name="_gotcha" style="display: none" />
+
+          <!-- Name Field -->
+          <div class="form-group" id="nameGroup">
+            <label for="fullname"
+              >Full Name <span class="required">*</span></label
+            >
+            <div class="input-wrapper">
+              <span class="input-icon">👤</span>
+              <input
+                type="text"
+                id="fullname"
+                name="name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <div class="error-message" id="nameError"></div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group" id="emailGroup">
+            <label for="email"
+              >Email Address <span class="required">*</span></label
+            >
+            <div class="input-wrapper">
+              <span class="input-icon">📧</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="hello@example.com"
+                required
+              />
+            </div>
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <!-- Subject Field (optional) -->
+          <div class="form-group" id="subjectGroup">
+            <label for="subject">Subject</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📝</span>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What is this regarding?"
+              />
+            </div>
+          </div>
+
+          <!-- Message Field (textarea) -->
+          <div class="form-group" id="messageGroup">
+            <label for="message">Message <span class="required">*</span></label>
+            <div class="input-wrapper textarea-wrapper">
+              <span class="input-icon">💬</span>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what you'd like to say..."
+                required
+              ></textarea>
+            </div>
+            <div class="error-message" id="messageError"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span>Send Message</span>
+            <span class="btn-icon">✈️</span>
+          </button>
+
+          <!-- Success Message -->
+          <div class="success-message" id="successMessage">
+            <div class="success-icon">✅</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. We'll get back to you soon.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
